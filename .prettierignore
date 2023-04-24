@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+package-lock.json
+.history
+.hypernym
+*.log*
+*.vsix
+dist
+icons
+media

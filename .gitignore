@@ -1,0 +1,10 @@
+.DS_Store
+node_modules
+.env
+.private
+.hypernym
+.history
+*.log*
+*.vsix
+*.zip
+dist

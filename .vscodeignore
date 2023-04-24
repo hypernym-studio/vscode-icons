@@ -1,0 +1,9 @@
+# exclude all
+*
+*/**
+
+# include only
+!dist
+!LICENSE.txt
+!package.json
+!README.md
