@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./src/public/icon.png" width="120" alt="Hypernym Icons Logo" />
+  <img src="https://raw.githubusercontent.com/hypernym-studio/vscode-icons/main/src/public/icon.png" width="120" alt="Hypernym Icons Logo" />
 </p>
 
 <h1 align="center">Hypernym Icons</h1>
@@ -10,7 +10,7 @@
 <br>
 
 <p align="center">
-  <img src="./media/cover.gif" alt="Hypernym Icons Cover" />
+  <img src="https://raw.githubusercontent.com/hypernym-studio/vscode-icons/main/media/cover.gif" alt="Hypernym Icons Cover" />
 </p>
 
 <br>
@@ -37,6 +37,6 @@ Feel free to use the official [discussions](https://github.com/hypernym-studio/v
 
 Developed in 🇭🇷 Croatia
 
-Released under the [Apache-2.0](LICENSE.txt) license.
+Released under the [Apache-2.0](https://raw.githubusercontent.com/hypernym-studio/vscode-icons/main/LICENSE.txt) license.
 
 © Hypernym Studio
