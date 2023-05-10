@@ -81,5 +81,12 @@ export const fileNames = {
   '.env.test': 'hidden',
   '.env.example': 'hidden',
   '.env.development': 'hidden',
-  '.env.production': 'hidden'
+  '.env.production': 'hidden',
+  codeowners: 'verified',
+  license: 'copyright',
+  'license.txt': 'copyright',
+  'license.md': 'copyright',
+  'license.rst': 'copyright',
+  'readme.md': 'info',
+  'readme.txt': 'info'
 }
