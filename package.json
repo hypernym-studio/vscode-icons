@@ -57,7 +57,7 @@
     "build:start": "npx vite-node src/utils/buildStart.ts",
     "build": "npm run build:start && npx vite-node src/extension.ts",
     "export": "npm run build && vsce package",
-    "publish": "npm run export && npx vsce publish",
+    "publish": "npm run build && npx vsce publish",
     "format": "prettier --write .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
