@@ -23,5 +23,8 @@ export const fileExtensions = {
   otf: 'font',
   ttf: 'font',
   woff: 'font',
-  woff2: 'font'
+  woff2: 'font',
+  sh: 'terminal',
+  bash: 'terminal',
+  zsh: 'terminal'
 }
