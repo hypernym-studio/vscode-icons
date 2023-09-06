@@ -1,6 +1,6 @@
 {
   "name": "hypernym-icons",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "An ultra-minimalistic VSCode icon set for modern devs.",
   "author": "Hypernym Studio",
   "license": "Apache-2.0",
@@ -58,6 +58,7 @@
     "build": "npm run build:start && vite-node src/extension.ts",
     "export": "npm run build && vsce package",
     "publish": "npm run build && vsce publish",
+    "bump": "bummp",
     "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js .",
     "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js --fix .",
     "format": "prettier --config .config/prettier.config.js --write .",
