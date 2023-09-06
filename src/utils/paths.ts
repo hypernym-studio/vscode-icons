@@ -5,7 +5,7 @@ const dirHypernym = `${dirRoot}.hypernym`
 const dirDist = `${dirRoot}dist`
 const dirSrc = `${dirRoot}src`
 const dirPublic = `${dirSrc}/public`
-const definitionsSchema = `${dirHypernym}/definitions.json`
+const definitionsSchema = `${dirHypernym}/definitions.js`
 const extensionFile = `${dirDist}/extension.json`
 
 export const paths = {
@@ -15,5 +15,5 @@ export const paths = {
   dirSrc,
   dirPublic,
   definitionsSchema,
-  extensionFile
+  extensionFile,
 }

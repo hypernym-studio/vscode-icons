@@ -1,12 +1,11 @@
-import { readFileSync } from 'node:fs'
-import { defaultNames } from './defaultNames'
-import { fileExtensions } from './fileExtensions'
-import { fileNames } from './fileNames'
-import { transformData, paths } from '../utils'
-import type { ThemeData } from '../types'
+import { defaultNames } from './default-names.js'
+import { fileExtensions } from './file-extensions.js'
+import { fileNames } from './file-names.js'
+import { transformData, paths } from '../utils/index.js'
+import type { ThemeData } from '../types/index.js'
 
-const iconDefinitions: ThemeData = JSON.parse(
-  readFileSync(paths.definitionsSchema, 'utf-8')
+const { default: iconDefinitions }: ThemeData = await import(
+  paths.definitionsSchema
 )
 
 export const theme = JSON.stringify(
@@ -19,9 +18,9 @@ export const theme = JSON.stringify(
     light: {
       ...transformData(defaultNames, 'light'),
       fileExtensions: transformData(fileExtensions, 'light'),
-      fileNames: transformData(fileNames, 'light')
-    }
+      fileNames: transformData(fileNames, 'light'),
+    },
   },
   null,
-  2
+  2,
 )

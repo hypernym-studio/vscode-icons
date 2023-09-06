@@ -26,5 +26,5 @@ export const fileExtensions = {
   woff2: 'font',
   sh: 'terminal',
   bash: 'terminal',
-  zsh: 'terminal'
+  zsh: 'terminal',
 }

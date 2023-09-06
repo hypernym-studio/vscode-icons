@@ -88,5 +88,5 @@ export const fileNames = {
   'license.md': 'copyright',
   'license.rst': 'copyright',
   'readme.md': 'info',
-  'readme.txt': 'info'
+  'readme.txt': 'info',
 }

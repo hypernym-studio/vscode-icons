@@ -1,8 +1,9 @@
+import { parse } from 'node:path'
 import { existsSync } from 'node:fs'
 import { mkdir, rm, cp, writeFile } from 'node:fs/promises'
 import fg from 'fast-glob'
-import { paths } from './paths'
-import type { ThemeDefinitions } from '../types'
+import { paths } from './paths.js'
+import type { ThemeDefinitions } from '../types/index.js'
 
 const { dirHypernym, dirDist, dirPublic, definitionsSchema } = paths
 
@@ -17,7 +18,7 @@ async function createDirectories() {
     for (const file of files) await rm(file, { recursive: true, force: true })
   }
 
-  await cp(dirPublic, dirDist, options)
+  return await cp(dirPublic, dirDist, options)
 }
 
 async function createIconDefinitions() {
@@ -25,14 +26,17 @@ async function createIconDefinitions() {
   const icons = await fg([`${dirPublic}/icons/*.svg`])
 
   for (const icon of icons) {
-    const iconName = icon.split('/').pop()?.split('.')[0] as string
+    const iconName = parse(icon).name
 
     definitionsData[`_${iconName}`] = {
-      iconPath: `./icons/${iconName}.svg`
+      iconPath: `./icons/${iconName}.svg`,
     }
   }
 
-  await writeFile(definitionsSchema, JSON.stringify(definitionsData, null, 2))
+  return await writeFile(
+    definitionsSchema,
+    `export default ${JSON.stringify(definitionsData, null, 2)}`,
+  )
 }
 
 async function run() {

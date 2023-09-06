@@ -1,6 +1,6 @@
-import type { ThemeData } from '../types'
+import type { ThemeData } from '../types/index.js'
 
-export const transformData = (data: ThemeData, theme: string) => {
+export function transformData(data: ThemeData, theme: string) {
   const transformedData: ThemeData = {}
 
   for (const [key, value] of Object.entries(data))

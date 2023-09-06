@@ -1,9 +1,9 @@
 import { writeFile } from 'node:fs/promises'
-import { theme } from './theme'
-import { paths } from './utils'
+import { theme } from './theme/index.js'
+import { paths } from './utils/index.js'
 
 async function generateExtension() {
-  await writeFile(paths.extensionFile, theme)
+  return await writeFile(paths.extensionFile, theme)
 }
 
 generateExtension()

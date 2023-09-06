@@ -1,12 +1,12 @@
 import { readFile, writeFile } from 'node:fs/promises'
 import fg from 'fast-glob'
-import { paths } from '../src/utils'
+import { paths } from '../src/utils/index.js'
 
 async function fileHandler(file: string, color: string) {
   const input = await readFile(file, 'utf8')
   const transform = input.replace(/fill=".*?"/, `fill="${color}"`)
 
-  await writeFile(file, transform)
+  return await writeFile(file, transform)
 }
 
 export async function replaceFill(theme: 'dark' | 'light', color: string) {
