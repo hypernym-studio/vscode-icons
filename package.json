@@ -53,30 +53,25 @@
     ]
   },
   "scripts": {
-    "dev": "npm run build:start && npx vite-node -w src/extension.ts",
-    "build:start": "npx vite-node src/utils/buildStart.ts",
-    "build": "npm run build:start && npx vite-node src/extension.ts",
+    "dev": "npm run build:start && vite-node -w src/extension.ts",
+    "build:start": "vite-node src/utils/build-start.ts",
+    "build": "npm run build:start && vite-node src/extension.ts",
     "export": "npm run build && vsce package",
-    "publish": "npm run build && npx vsce publish",
-    "format": "prettier --write .",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "replace": "npx vite-node scripts/replace.ts"
+    "publish": "npm run build && vsce publish",
+    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js .",
+    "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js --fix .",
+    "format": "prettier --config .config/prettier.config.js --write .",
+    "replace": "vite-node scripts/replace.ts"
   },
   "devDependencies": {
-    "@types/node": "^18.16.7",
-    "@typescript-eslint/eslint-plugin": "^5.59.5",
-    "@typescript-eslint/parser": "^5.59.5",
-    "@vscode/vsce": "^2.19.0",
-    "eslint": "^8.40.0",
-    "eslint-config-prettier": "^8.8.0",
-    "fast-glob": "^3.2.12",
-    "prettier": "^2.8.8",
-    "typescript": "^5.0.4",
-    "vite-node": "^0.31.0"
-  },
-  "eslintConfig": {
-    "extends": "./.config/eslint.config.cjs"
-  },
-  "prettier": "./.config/prettier.config.cjs"
+    "@types/node": "^20.5.9",
+    "@vscode/vsce": "^2.21.0",
+    "bummp": "^0.2.0",
+    "configshare": "^0.1.4",
+    "eslint": "^8.48.0",
+    "fast-glob": "^3.3.1",
+    "prettier": "^3.0.3",
+    "typescript": "^5.1.6",
+    "vite-node": "^0.34.3"
+  }
 }
