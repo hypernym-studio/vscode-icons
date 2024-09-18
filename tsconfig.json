@@ -1,4 +1,10 @@
 {
-  "extends": "configshare/tsconfig",
-  "include": ["src/**/*", ".config/**/*", "scripts/**/*"]
+  "extends": "@hypernym/tsconfig",
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@": ["./src"],
+      "@/*": ["./src/*"]
+    }
+  }
 }
