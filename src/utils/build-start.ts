@@ -1,27 +1,24 @@
 import { parse } from 'node:path'
-import { existsSync } from 'node:fs'
-import { mkdir, rm, cp, writeFile } from 'node:fs/promises'
+import { exists, write, copy, mkdir, remove } from '@hypernym/utils/fs'
 import fg from 'fast-glob'
-import { paths } from './paths.js'
-import type { ThemeDefinitions } from '../types/index.js'
+import { paths } from './paths'
+import type { ThemeDefinitions } from '@/types'
 
 const { dirHypernym, dirDist, dirPublic, definitionsSchema } = paths
 
-async function createDirectories() {
-  const options = { recursive: true }
-
-  if (!existsSync(dirHypernym)) await mkdir(dirHypernym, options)
-  if (!existsSync(dirDist)) {
-    await mkdir(dirDist, options)
-  } else {
+async function createDirectories(): Promise<void> {
+  if (!(await exists(dirHypernym))) await mkdir(dirHypernym)
+  if (!(await exists(dirDist))) await mkdir(dirDist)
+  else {
     const files = await fg([`${dirDist}/**`], { onlyFiles: false, deep: 1 })
-    for (const file of files) await rm(file, { recursive: true, force: true })
+    for (const file of files) {
+      await remove(file, { recursive: true, force: true })
+    }
   }
-
-  return await cp(dirPublic, dirDist, options)
+  return await copy(dirPublic, dirDist)
 }
 
-async function createIconDefinitions() {
+async function createIconDefinitions(): Promise<void> {
   const definitionsData: ThemeDefinitions = {}
   const icons = await fg([`${dirPublic}/icons/*.svg`])
 
@@ -33,13 +30,13 @@ async function createIconDefinitions() {
     }
   }
 
-  return await writeFile(
+  return await write(
     definitionsSchema,
     `export default ${JSON.stringify(definitionsData, null, 2)}`,
   )
 }
 
-async function run() {
+async function run(): Promise<void> {
   try {
     await createDirectories()
     await createIconDefinitions()

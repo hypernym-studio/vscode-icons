@@ -1,2 +1,2 @@
-export * from './paths.js'
-export * from './transform-data.js'
+export * from './paths'
+export * from './transform-data'
