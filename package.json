@@ -1,8 +1,8 @@
 {
   "name": "hypernym-icons",
   "version": "1.3.0",
-  "description": "An ultra-minimalistic VSCode icon set for modern devs.",
   "author": "Hypernym Studio",
+  "description": "An ultra-minimalistic VSCode icon set for modern devs.",
   "license": "Apache-2.0",
   "publisher": "hypernym-studio",
   "displayName": "Hypernym Icons",
@@ -25,11 +25,10 @@
     "vscode-extension",
     "vscode-icon-theme",
     "vscode-icon-extension",
-    "hypernym-icons"
+    "hypernym-studio",
+    "hypernym-icons",
+    "hypernym"
   ],
-  "engines": {
-    "vscode": ">=1.69.0"
-  },
   "categories": [
     "Other",
     "Themes"
@@ -42,7 +41,6 @@
     "color": "#0d0d0d",
     "theme": "dark"
   },
-  "sideEffects": false,
   "contributes": {
     "iconThemes": [
       {
@@ -53,26 +51,46 @@
     ]
   },
   "scripts": {
-    "dev": "npm run build:start && vite-node -w src/extension.ts",
-    "build:start": "vite-node src/utils/build-start.ts",
-    "build": "npm run build:start && vite-node src/extension.ts",
-    "export": "npm run build && vsce package",
-    "publish": "npm run build && vsce publish",
-    "bump": "bummp",
-    "lint": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js .",
-    "lint:fix": "ESLINT_USE_FLAT_CONFIG=true eslint -c .config/eslint.config.js --fix .",
-    "format": "prettier --config .config/prettier.config.js --write .",
-    "replace": "vite-node scripts/replace.ts"
+    "dev": "pnpm build:start && bun run --watch ./src/extension.ts",
+    "build:start": "bun run ./src/utils/build-start.ts",
+    "build": "pnpm build:start && bun run ./src/extension.ts",
+    "export": "pnpm build && vsce package --no-dependencies",
+    "export:list": "vsce ls --tree --no-dependencies",
+    "publish": "pnpm build && vsce publish --no-dependencies",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix .",
+    "format": "prettier --write .",
+    "replace": "bun run ./scripts/replace.ts"
+  },
+  "sideEffects": false,
+  "packageManager": "pnpm@9.10.0",
+  "engines": {
+    "vscode": ">=1.69.0",
+    "node": ">=20.0.0",
+    "pnpm": ">=9.0.0"
+  },
+  "peerDependencies": {
+    "@types/node": ">=20.0.0",
+    "typescript": ">=5.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@types/node": {
+      "optional": true
+    },
+    "typescript": {
+      "optional": true
+    }
   },
   "devDependencies": {
-    "@types/node": "^20.5.9",
-    "@vscode/vsce": "^2.21.0",
-    "bummp": "^0.2.0",
-    "configshare": "^0.1.4",
-    "eslint": "^8.48.0",
-    "fast-glob": "^3.3.1",
-    "prettier": "^3.0.3",
-    "typescript": "^5.1.6",
-    "vite-node": "^0.34.3"
+    "@hypernym/eslint-config": "^3.5.0",
+    "@hypernym/prettier-config": "^3.2.0",
+    "@hypernym/tsconfig": "^2.4.0",
+    "@hypernym/utils": "^3.3.0",
+    "@types/node": "^22.5.5",
+    "@vscode/vsce": "^3.1.0",
+    "eslint": "^9.10.0",
+    "fast-glob": "^3.3.2",
+    "prettier": "^3.3.3",
+    "typescript": "^5.6.2"
   }
 }
