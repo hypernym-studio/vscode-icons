@@ -7,7 +7,17 @@
 <p align="center">An ultra-minimalistic VSCode icon set for modern devs.</p>
 
 <p align="center">
-  <sub><a href="https://github.com/hypernym-studio/vscode-icons">Repository</a> | <a href="https://github.com/hypernym-studio/vscode-icons/releases">Releases</a> | <a href="https://github.com/hypernym-studio/vscode-icons/discussions">Discussions</a> | <a href="https://marketplace.visualstudio.com/items?itemName=hypernym-studio.hypernym-icons">Marketplace</a></sub>
+  <a href="https://github.com/hypernym-studio/vscode-icons">Repository</a>
+  <span>+</span>
+  <a href="https://github.com/hypernym-studio/vscode-icons/releases">Releases</a>
+  <span>+</span>
+  <a href="https://github.com/hypernym-studio/vscode-icons/discussions">Discussions</a>
+  <span>+</span>
+  <a href="https://marketplace.visualstudio.com/items?itemName=hypernym-studio.hypernym-icons">Marketplace</a>
+</p>
+
+<p align="center">
+  <strong>Hypernym Studio</strong>
 </p>
 
 <br>
@@ -34,12 +44,12 @@ Search for `Hypernym Icons` in the official VSCode Marketplace and install the e
 
 ## Community
 
-Feel free to use the official [discussions](https://github.com/hypernym-studio/vscode-icons/discussions) for any additional questions.
+Feel free to ask questions or share new ideas.
+
+Use the official [discussions](https://github.com/hypernym-studio/vscode-icons/discussions) to get involved.
 
 ## License
 
-Developed in 🇭🇷 Croatia
+Developed in 🇭🇷 Croatia, © Hypernym Studio.
 
 Released under the [Apache-2.0](https://raw.githubusercontent.com/hypernym-studio/vscode-icons/main/LICENSE.txt) license.
-
-© Hypernym Studio
