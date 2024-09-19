@@ -1,6 +1,7 @@
 # exclude all
 *
 */**
+**/.DS_Store
 
 # include only
 !dist
