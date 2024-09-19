@@ -8,6 +8,7 @@
   "displayName": "Hypernym Icons",
   "icon": "dist/icon.png",
   "type": "module",
+  "private": true,
   "homepage": "https://github.com/hypernym-studio/vscode-icons",
   "repository": {
     "type": "git",
