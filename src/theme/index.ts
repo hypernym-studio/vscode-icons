@@ -1,8 +1,8 @@
-import { defaultNames } from './default-names.js'
-import { fileExtensions } from './file-extensions.js'
-import { fileNames } from './file-names.js'
-import { transformData, paths } from '../utils/index.js'
-import type { ThemeData } from '../types/index.js'
+import { defaultNames } from './default-names'
+import { fileExtensions } from './file-extensions'
+import { fileNames } from './file-names'
+import { transformData, paths } from '@/utils'
+import type { ThemeData } from '@/types'
 
 const { default: iconDefinitions }: ThemeData = await import(
   paths.definitionsSchema
