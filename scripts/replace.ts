@@ -1,15 +1,18 @@
-import { readFile, writeFile } from 'node:fs/promises'
+import { read, write } from '@hypernym/utils/fs'
 import fg from 'fast-glob'
-import { paths } from '../src/utils/index.js'
+import { paths } from '@/utils'
 
-async function fileHandler(file: string, color: string) {
-  const input = await readFile(file, 'utf8')
+async function fileHandler(file: string, color: string): Promise<void> {
+  const input = await read(file)
   const transform = input.replace(/fill=".*?"/, `fill="${color}"`)
 
-  return await writeFile(file, transform)
+  return await write(file, transform)
 }
 
-export async function replaceFill(theme: 'dark' | 'light', color: string) {
+export async function replaceFill(
+  theme: 'dark' | 'light',
+  color: string,
+): Promise<void> {
   try {
     const svgFiles = await fg([`${paths.dirPublic}/icons/*_${theme}.svg`])
 
