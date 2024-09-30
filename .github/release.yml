@@ -1,23 +1,28 @@
 changelog:
   categories:
-    - title: Bug Fixes
+    - title: Breaking Changes
       labels:
-        - fix
+        - breaking-change
+        - break
     - title: New Features
       labels:
         - feat
+    - title: Bug Fixes
+      labels:
+        - fix
     - title: Types
       labels:
         - types
+        - dts
+    - title: Refactoring Code
+      labels:
+        - refactor
     - title: Tests
       labels:
         - test
     - title: Documentation
       labels:
         - docs
-    - title: Breaking Changes
-      labels:
-        - breaking-change
     - title: Other Changes
       labels:
         - '*'
