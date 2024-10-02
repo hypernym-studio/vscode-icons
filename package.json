@@ -10,6 +10,10 @@
   "type": "module",
   "private": true,
   "homepage": "https://github.com/hypernym-studio/vscode-icons",
+  "funding": "https://github.com/sponsors/ivodolenc",
+  "sponsor": {
+    "url": "https://github.com/sponsors/ivodolenc"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/hypernym-studio/vscode-icons"
@@ -42,31 +46,65 @@
     "color": "#0d0d0d",
     "theme": "dark"
   },
+  "main": "./dist/extension/index.cjs",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
   "contributes": {
     "iconThemes": [
       {
         "id": "hypernym-icons",
         "label": "Hypernym Icons",
-        "path": "./dist/extension.json"
+        "path": "./dist/hypernym-icons.json"
       }
-    ]
+    ],
+    "configuration": {
+      "title": "Hypernym Icons",
+      "properties": {
+        "hypernym-icons.hidesExplorerArrows": {
+          "order": 1,
+          "type": "boolean",
+          "default": true,
+          "markdownDescription": "Specifies the visibility of the explorer arrows. \n\n **Default:** `true` \n\n **Example:** `true`, `false`"
+        },
+        "hypernym-icons.folders.color": {
+          "order": 2,
+          "type": "string",
+          "default": null,
+          "markdownDescription": "Specifies a custom color for folder icons. Accepts valid HEX color format. \n\n **Default:** `undefined` \n\n **Example:** `#fff`, `#ffffff`, `#ffffff33`"
+        },
+        "hypernym-icons.icons.color": {
+          "order": 3,
+          "type": "string",
+          "default": null,
+          "markdownDescription": "Specifies a custom color for folder icons. Accepts valid HEX color format. \n\n **Default:** `undefined` \n\n **Example:** `#fff`, `#ffffff`, `#ffffff33`"
+        },
+        "hypernym-icons.icons.fontSize": {
+          "order": 4,
+          "type": "string",
+          "default": null,
+          "markdownDescription": "Specifies a custom font size for all icons. Accepts a percentage size format. \n\n **Default:** `125%` \n\n **Example:** `100%`, `120%`, `130%`"
+        }
+      }
+    }
   },
   "scripts": {
-    "dev": "pnpm build:start && bun run --watch ./src/extension.ts",
-    "build:start": "bun run ./src/utils/build-start.ts",
-    "build": "pnpm build:start && bun run ./src/extension.ts",
-    "export": "pnpm build && vsce package --no-dependencies",
+    "build:static": "bun run ./scripts/build-static.ts",
+    "build:theme": "bun run ./scripts/build-theme.ts",
+    "build:bundle": "bun run ./scripts/build-bundle.ts",
+    "build:all": "pnpm build:static && pnpm build:theme && pnpm build:bundle",
     "export:list": "vsce ls --tree --no-dependencies",
-    "publish": "pnpm build && vsce publish --no-dependencies",
+    "export:extension": "pnpm build:static && pnpm build:theme && pnpm build:bundle --production && vsce package --no-dependencies",
+    "publish:extension": "pnpm build:static && pnpm build:theme && pnpm build:bundle --production && vsce publish --no-dependencies",
+    "dev": "pnpm build:static && pnpm build:theme && bun run ./scripts/build-watch.ts",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
-    "format": "prettier --write .",
-    "replace": "bun run ./scripts/replace.ts"
+    "format": "prettier --write ."
   },
   "sideEffects": false,
-  "packageManager": "pnpm@9.10.0",
+  "packageManager": "pnpm@9.12.0",
   "engines": {
-    "vscode": ">=1.69.0",
+    "vscode": "^1.93.0",
     "node": ">=20.0.0",
     "pnpm": ">=9.0.0"
   },
@@ -86,12 +124,13 @@
     "@hypernym/eslint-config": "^3.5.0",
     "@hypernym/prettier-config": "^3.2.0",
     "@hypernym/tsconfig": "^2.4.0",
-    "@hypernym/utils": "^3.3.0",
-    "@types/node": "^22.5.5",
-    "@vscode/vsce": "^3.1.0",
-    "eslint": "^9.10.0",
-    "fast-glob": "^3.3.2",
+    "@hypernym/utils": "^3.4.0",
+    "@types/node": "^22.7.4",
+    "@types/vscode": "^1.93.0",
+    "@vscode/vsce": "^3.1.1",
+    "esbuild": "^0.24.0",
+    "eslint": "^9.11.1",
     "prettier": "^3.3.3",
-    "typescript": "^5.6.2"
+    "typescript": "^5.5.4"
   }
 }
