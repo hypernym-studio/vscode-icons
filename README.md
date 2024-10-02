@@ -8,11 +8,11 @@
 
 <p align="center">
   <a href="https://github.com/hypernym-studio/vscode-icons">Repository</a>
-  <span>+</span>
+  <span>✦</span>
   <a href="https://github.com/hypernym-studio/vscode-icons/releases">Releases</a>
-  <span>+</span>
+  <span>✦</span>
   <a href="https://github.com/hypernym-studio/vscode-icons/discussions">Discussions</a>
-  <span>+</span>
+  <span>✦</span>
   <a href="https://marketplace.visualstudio.com/items?itemName=hypernym-studio.hypernym-icons">Marketplace</a>
 </p>
 
@@ -22,15 +22,11 @@
 
 <br>
 
-## Extension
-
-This icon theme is heavily inspired by the latest modern trends and follows an ultra-minimalistic style. Also, the project is built with TypeScript under the hood so it can be very easily extended in dev mode.
-
 ## Installation
 
 ### Marketplace
 
-Search for `Hypernym Icons` in the official VSCode Marketplace and install the extension.
+Install [Hypernym Icons](<(https://marketplace.visualstudio.com/items?itemName=hypernym-studio.hypernym-icons)>) extension from the official VSCode Marketplace.
 
 ### Manual
 
