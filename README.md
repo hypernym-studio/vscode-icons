@@ -26,9 +26,11 @@
 
 ### Marketplace
 
-Install [Hypernym Icons](<(https://marketplace.visualstudio.com/items?itemName=hypernym-studio.hypernym-icons)>) extension from the official VSCode Marketplace.
+Install [Hypernym Icons](https://marketplace.visualstudio.com/items?itemName=hypernym-studio.hypernym-icons) extension from the official VSCode Marketplace.
 
 ### Manual
+
+If necessary, the extension can be installed manually (optional).
 
 1. Download the [latest version](https://github.com/hypernym-studio/vscode-icons/releases/latest) of the extension.
 2. Open the Command Palette dropdown (⇧⌘P).
