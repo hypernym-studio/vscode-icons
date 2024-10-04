@@ -70,20 +70,26 @@
         "hypernym-icons.folders.color": {
           "order": 2,
           "type": "string",
-          "default": null,
+          "default": "",
           "markdownDescription": "Specifies a custom color for folder icons. Accepts valid HEX color format. \n\n Default: `undefined` \n\n Example: `#fff`, `#ffffff`, `#ffffff33`"
         },
-        "hypernym-icons.icons.color": {
+        "hypernym-icons.folders.size": {
           "order": 3,
           "type": "string",
-          "default": null,
-          "markdownDescription": "Specifies a custom color for folder icons. Accepts valid HEX color format. \n\n Default: `undefined` \n\n Example: `#fff`, `#ffffff`, `#ffffff33`"
+          "default": "",
+          "markdownDescription": "Specifies a custom size for folder icons. Accepts a percentage size format. \n\n Default: `undefined` \n\n Example: `130%`"
         },
-        "hypernym-icons.icons.fontSize": {
+        "hypernym-icons.icons.color": {
           "order": 4,
           "type": "string",
-          "default": null,
-          "markdownDescription": "Specifies a custom font size for all icons. Accepts a percentage size format. \n\n Default `125%` \n\n Example: `130%`"
+          "default": "",
+          "markdownDescription": "Specifies a custom color for all icons. Accepts valid HEX color format. \n\n Default: `undefined` \n\n Example: `#fff`, `#ffffff`, `#ffffff33`"
+        },
+        "hypernym-icons.icons.size": {
+          "order": 5,
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Specifies a custom size for all icons. Accepts a percentage size format. \n\n Default: `undefined` \n\n Example: `130%`"
         }
       }
     }
@@ -104,7 +110,7 @@
   "sideEffects": false,
   "packageManager": "pnpm@9.12.0",
   "engines": {
-    "vscode": "^1.93.0",
+    "vscode": "^1.94.0",
     "node": ">=20.0.0",
     "pnpm": ">=9.0.0"
   },
@@ -126,7 +132,7 @@
     "@hypernym/tsconfig": "^2.4.0",
     "@hypernym/utils": "^3.4.0",
     "@types/node": "^22.7.4",
-    "@types/vscode": "^1.93.0",
+    "@types/vscode": "^1.94.0",
     "@vscode/vsce": "^3.1.1",
     "esbuild": "^0.24.0",
     "eslint": "^9.11.1",
