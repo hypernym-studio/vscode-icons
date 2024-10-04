@@ -4,11 +4,11 @@ export interface ExtensionConfig {
    *
    * @default true
    */
-  hidesExplorerArrows?: boolean
+  hidesExplorerArrows: boolean
   /**
    * Folders options.
    */
-  folders?: {
+  folders: {
     /**
      * Specifies a custom color for folder icons.
      *
@@ -29,7 +29,7 @@ export interface ExtensionConfig {
   /**
    * Icons options.
    */
-  icons?: {
+  icons: {
     /**
      * Specifies a custom color for all icons.
      *
