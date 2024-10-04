@@ -10,6 +10,9 @@ const options: BuildOptions = {
   minify: isProduction,
 }
 
+// VSCode API Documentation
+// @link https://code.visualstudio.com/api/working-with-extensions/bundling-extension
+
 async function buildBundle(): Promise<void> {
   await build(options)
 }

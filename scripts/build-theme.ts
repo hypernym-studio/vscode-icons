@@ -5,7 +5,7 @@ import { createIconTheme } from '@/theme'
 async function buildTheme(): Promise<void> {
   const theme = createIconTheme()
   const json = JSON.stringify(theme, null, 2)
-  await write(paths.themeFile, json)
+  await write(paths.file.theme, json)
 }
 
 buildTheme()
