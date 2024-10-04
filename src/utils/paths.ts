@@ -1,19 +1,18 @@
-import { fileURLToPath } from 'node:url'
+import { cwd } from 'node:process'
+import { resolve } from 'node:path'
+import { extensionThemeFile } from './meta'
 
-const dirRoot = fileURLToPath(new URL('../../', import.meta.url))
-const dirHypernym = `${dirRoot}.hypernym`
-const dirDist = `${dirRoot}dist`
-const dirSrc = `${dirRoot}src`
-const dirPublic = `${dirSrc}/public`
-const definitionsSchema = `${dirHypernym}/definitions.js`
-const extensionFile = `${dirDist}/extension.json`
+const dirRoot = cwd()
 
 export const paths = {
-  dirRoot,
-  dirHypernym,
-  dirDist,
-  dirSrc,
-  dirPublic,
-  definitionsSchema,
-  extensionFile,
+  dir: {
+    root: dirRoot,
+    dist: resolve(dirRoot, 'dist'),
+    static: resolve(dirRoot, 'static'),
+    icons: resolve(dirRoot, 'icons'),
+    src: resolve(dirRoot, 'src'),
+  },
+  file: {
+    theme: resolve(dirRoot, 'dist', extensionThemeFile),
+  },
 }
