@@ -1,6 +1,6 @@
 import { cwd } from 'node:process'
 import { resolve } from 'node:path'
-import { extensionThemeFile } from './meta'
+import { extensionThemeFile } from '@/extension/meta'
 
 const dirRoot = cwd()
 
