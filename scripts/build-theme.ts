@@ -1,7 +1,7 @@
 import { write } from '@hypernym/utils/fs'
 import { paths } from '@/utils'
 import { createIconTheme } from '@/theme'
-import { defaultConfig } from '@/extension/default-config'
+import { defaultConfig } from '@/extension/config'
 
 async function buildTheme(): Promise<void> {
   const config = defaultConfig()
