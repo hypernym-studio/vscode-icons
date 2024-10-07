@@ -1,12 +1,13 @@
 import { workspace, window } from 'vscode'
-import { detectConfigChange } from './detect-config-change'
-import { logger } from './logger'
+import { registeredCommands } from './commands'
+import { detectConfigChange } from './config/detect-config-change'
+import { showMessage } from './messages'
 import type { ExtensionContext } from 'vscode'
 
 export async function activate(context: ExtensionContext): Promise<void> {
-  const version = context.extension.packageJSON.version
-
   try {
+    context.subscriptions.push(...registeredCommands())
+
     await detectConfigChange(undefined, context)
 
     context.subscriptions.push(
@@ -15,19 +16,17 @@ export async function activate(context: ExtensionContext): Promise<void> {
       ),
     )
 
-    const successMessage = logger.info(`(${version}): Activation succeeded!`)
+    const successMessage = showMessage('Activation succeeded!')
     window.showInformationMessage(successMessage)
   } catch {
-    const errorMessage = logger.error(
-      `(${version}): Activation failed! Something went wrong, please try again.`,
+    const errorMessage = showMessage(
+      'Activation failed! Something went wrong, please try again.',
     )
     window.showErrorMessage(errorMessage)
   }
 }
 
-export function deactivate(context: ExtensionContext): void {
-  const version = context.extension.packageJSON.version
-
-  const successMessage = logger.info(`(${version}): Deactivation succeeded!`)
+export function deactivate(): void {
+  const successMessage = showMessage('Deactivation succeeded!')
   window.showInformationMessage(successMessage)
 }
