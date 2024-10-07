@@ -92,7 +92,34 @@
           "markdownDescription": "Specifies a custom size for all icons. Accepts a percentage size format. \n\n Default: `undefined` \n\n Example: `130%`"
         }
       }
-    }
+    },
+    "commands": [
+      {
+        "category": "Hypernym Icons",
+        "command": "hypernym-icons.toggleExplorerArrows",
+        "title": "Toggle Explorer Arrows"
+      },
+      {
+        "category": "Hypernym Icons",
+        "command": "hypernym-icons.setFolderColor",
+        "title": "Set Folder Color"
+      },
+      {
+        "category": "Hypernym Icons",
+        "command": "hypernym-icons.setFolderSize",
+        "title": "Set Folder Size"
+      },
+      {
+        "category": "Hypernym Icons",
+        "command": "hypernym-icons.setIconColor",
+        "title": "Set Icon Color"
+      },
+      {
+        "category": "Hypernym Icons",
+        "command": "hypernym-icons.setIconSize",
+        "title": "Set Icon Size"
+      }
+    ]
   },
   "scripts": {
     "build:static": "bun run ./scripts/build-static.ts",
