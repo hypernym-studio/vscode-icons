@@ -4,212 +4,100 @@ import { createIconMap } from './icon-map'
 export const fileNames = createIconMap([
   {
     icon: icons.config.id,
-    names: [
-      'eslint.config.js',
-      'eslint.config.mjs',
-      'eslint.config.ts',
-      'eslint.config.cjs',
-    ],
+    pattern: 'eslint.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'prettier.config.js',
-      'prettier.config.mjs',
-      'prettier.config.ts',
-      'prettier.config.cjs',
-    ],
+    pattern: 'prettier.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'stylelint.config.js',
-      'stylelint.config.mjs',
-      'stylelint.config.ts',
-      'stylelint.config.cjs',
-    ],
+    pattern: 'stylelint.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'vite.config.js',
-      'vite.config.mjs',
-      'vite.config.ts',
-      'vite.config.cjs',
-    ],
+    pattern: 'vite.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'vitest.config.js',
-      'vitest.config.mjs',
-      'vitest.config.ts',
-      'vitest.config.cjs',
-    ],
+    pattern: 'vitest.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'postcss.config.js',
-      'postcss.config.mjs',
-      'postcss.config.ts',
-      'postcss.config.cjs',
-    ],
+    pattern: 'postcss.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'rollup.config.js',
-      'rollup.config.mjs',
-      'rollup.config.ts',
-      'rollup.config.cjs',
-    ],
+    pattern: 'rollup.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'bundler.config.js',
-      'bundler.config.mjs',
-      'bundler.config.ts',
-      'bundler.config.cjs',
-    ],
+    pattern: 'rolldown.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'hypernym.config.js',
-      'hypernym.config.mjs',
-      'hypernym.config.ts',
-      'hypernym.config.cjs',
-    ],
+    pattern: 'bundler.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'hyper.config.js',
-      'hyper.config.mjs',
-      'hyper.config.ts',
-      'hyper.config.cjs',
-    ],
+    pattern: 'hypernym.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'webpack.config.js',
-      'webpack.config.mjs',
-      'webpack.config.ts',
-      'webpack.config.cjs',
-    ],
+    pattern: 'hyper.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'webpack.mix.js',
-      'webpack.mix.mjs',
-      'webpack.mix.ts',
-      'webpack.mix.cjs',
-    ],
+    pattern: 'webpack.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'rspack.config.js',
-      'rspack.config.mjs',
-      'rspack.config.ts',
-      'rspack.config.cjs',
-    ],
+    pattern: 'webpack.mix.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'rsbuild.config.js',
-      'rsbuild.config.mjs',
-      'rsbuild.config.ts',
-      'rsbuild.config.cjs',
-    ],
+    pattern: 'rspack.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'rolldown.config.js',
-      'rolldown.config.mjs',
-      'rolldown.config.ts',
-      'rolldown.config.cjs',
-    ],
+    pattern: 'rsbuild.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'next.config.js',
-      'next.config.mjs',
-      'next.config.ts',
-      'next.config.cjs',
-      'turbo.json',
-    ],
+    pattern: 'next.config.{js,mjs,cjs,ts,mts,cts}',
+    names: ['turbo.json'],
   },
   {
     icon: icons.config.id,
-    names: [
-      'nuxt.config.js',
-      'nuxt.config.mjs',
-      'nuxt.config.ts',
-      'nuxt.config.cjs',
-    ],
+    pattern: 'nuxt.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'nitro.config.js',
-      'nitro.config.mjs',
-      'nitro.config.ts',
-      'nitro.config.cjs',
-    ],
+    pattern: 'nitro.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'vue.config.js',
-      'vue.config.mjs',
-      'vue.config.ts',
-      'vue.config.cjs',
-    ],
+    pattern: 'vue.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'svelte.config.js',
-      'svelte.config.mjs',
-      'svelte.config.ts',
-      'svelte.config.cjs',
-    ],
+    pattern: 'svelte.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'tailwind.config.js',
-      'tailwind.config.mjs',
-      'tailwind.config.ts',
-      'tailwind.config.cjs',
-    ],
+    pattern: 'tailwind.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'astro.config.js',
-      'astro.config.mjs',
-      'astro.config.ts',
-      'astro.config.cjs',
-    ],
+    pattern: 'astro.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
-    names: [
-      'babel.config.js',
-      'babel.config.mjs',
-      'babel.config.ts',
-      'babel.config.cjs',
-      'babel.config.json',
-    ],
+    pattern: 'babel.config.{js,mjs,cjs,ts,mts,cts,json}',
+  },
+  {
+    icon: icons.config.id,
+    pattern: 'mdsvex.config.{js,mjs,cjs,ts,mts,cts}',
   },
   {
     icon: icons.config.id,
@@ -231,27 +119,17 @@ export const fileNames = createIconMap([
   },
   {
     icon: icons.hidden.id,
-    names: [
-      '.prettier',
-      '.prettierrc',
-      '.prettierignore',
-      '.prettierrc.js',
-      '.prettierrc.cjs',
-    ],
+    pattern: '.prettierrc.{js,cjs}',
+    names: ['.prettier', '.prettierrc', '.prettierignore'],
   },
   {
     icon: icons.hidden.id,
-    names: [
-      '.stylelint',
-      '.stylelintrc',
-      '.stylelintignore',
-      '.stylelintrc.js',
-      '.stylelintrc.cjs',
-    ],
+    pattern: '.stylelintrc.{js,cjs}',
+    names: ['.stylelint', '.stylelintrc', '.stylelintignore'],
   },
   {
     icon: icons.hidden.id,
-    names: ['.pnpmfile.js', '.pnpmfile.cjs'],
+    pattern: '.pnpmfile.{js,cjs}',
   },
   {
     icon: icons.hidden.id,
@@ -299,19 +177,16 @@ export const fileNames = createIconMap([
   },
   {
     icon: icons.info.id,
-    names: ['readme.md', 'readme.txt'],
+    pattern: 'readme.{md,txt}',
   },
   {
     icon: icons.copyright.id,
-    names: [
-      'license',
-      'license.txt',
-      'license.md',
-      'license.rst',
-      'licence',
-      'licence.txt',
-      'licence.md',
-      'licence.rst',
-    ],
+    pattern: 'license.{txt,md,rst}',
+    names: ['license'],
+  },
+  {
+    icon: icons.copyright.id,
+    pattern: 'licence.{txt,md,rst}',
+    names: ['licence'],
   },
 ])
