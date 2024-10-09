@@ -16,13 +16,13 @@ importers:
         version: 3.2.0(prettier@3.3.3)
       '@hypernym/tsconfig':
         specifier: ^2.4.0
-        version: 2.4.0(@types/node@22.7.4)(typescript@5.5.4)
+        version: 2.4.0(@types/node@22.7.5)(typescript@5.5.4)
       '@hypernym/utils':
         specifier: ^3.4.0
-        version: 3.4.0(@types/node@22.7.4)(typescript@5.5.4)
+        version: 3.4.0(@types/node@22.7.5)(typescript@5.5.4)
       '@types/node':
-        specifier: ^22.7.4
-        version: 22.7.4
+        specifier: ^22.7.5
+        version: 22.7.5
       '@types/vscode':
         specifier: ^1.94.0
         version: 1.94.0
@@ -374,8 +374,8 @@ packages:
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
 
-  '@types/node@22.7.4':
-    resolution: {integrity: sha512-y+NPi1rFzDs1NdQHHToqeiX2TIS79SWEAw9GYhkkx8bD0ChpfqC+n2j5OXOCpzfojBEBt6DnEnnG9MY0zk1XLg==}
+  '@types/node@22.7.5':
+    resolution: {integrity: sha512-jML7s2NAzMWc//QSJ1a3prpk78cOPchGvXJsC3C6R6PSMoooztvRVQEz89gmBTBY1SPMaqo5teB4uNHPdetShQ==}
 
   '@types/vscode@1.94.0':
     resolution: {integrity: sha512-UyQOIUT0pb14XSqJskYnRwD2aG0QrPVefIfrW1djR+/J4KeFQ0i1+hjZoaAmeNf3Z2jleK+R2hv+EboG/m8ruw==}
@@ -1660,15 +1660,15 @@ snapshots:
     dependencies:
       prettier: 3.3.3
 
-  '@hypernym/tsconfig@2.4.0(@types/node@22.7.4)(typescript@5.5.4)':
+  '@hypernym/tsconfig@2.4.0(@types/node@22.7.5)(typescript@5.5.4)':
     dependencies:
       typescript: 5.5.4
     optionalDependencies:
-      '@types/node': 22.7.4
+      '@types/node': 22.7.5
 
-  '@hypernym/utils@3.4.0(@types/node@22.7.4)(typescript@5.5.4)':
+  '@hypernym/utils@3.4.0(@types/node@22.7.5)(typescript@5.5.4)':
     optionalDependencies:
-      '@types/node': 22.7.4
+      '@types/node': 22.7.5
       typescript: 5.5.4
 
   '@isaacs/cliui@8.0.2':
@@ -1705,7 +1705,7 @@ snapshots:
 
   '@types/json-schema@7.0.15': {}
 
-  '@types/node@22.7.4':
+  '@types/node@22.7.5':
     dependencies:
       undici-types: 6.19.8
 
