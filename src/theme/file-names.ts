@@ -101,14 +101,22 @@ export const fileNames = createIconMap([
   },
   {
     icon: icons.config.id,
+    pattern: 'playwright.config.{js,mjs,cjs,ts,mts,cts}',
+  },
+  {
+    icon: icons.config.id,
+    pattern: 'playwright-ct.config.{js,mjs,cjs,ts,mts,cts}',
+  },
+  {
+    icon: icons.config.id,
     names: ['renovate.json'],
   },
   {
-    icon: icons.hidden.id,
+    icon: icons.dot.id,
     names: ['.renovaterc', '.renovaterc.json'],
   },
   {
-    icon: icons.hidden.id,
+    icon: icons.dot.id,
     names: [
       '.eslint',
       '.eslintrc',
@@ -118,39 +126,46 @@ export const fileNames = createIconMap([
     ],
   },
   {
-    icon: icons.hidden.id,
+    icon: icons.dot.id,
     pattern: '.prettierrc.{js,cjs}',
     names: ['.prettier', '.prettierrc', '.prettierignore'],
   },
   {
-    icon: icons.hidden.id,
+    icon: icons.dot.id,
     pattern: '.stylelintrc.{js,cjs}',
     names: ['.stylelint', '.stylelintrc', '.stylelintignore'],
   },
   {
-    icon: icons.hidden.id,
+    icon: icons.dot.id,
     pattern: '.pnpmfile.{js,cjs}',
   },
   {
-    icon: icons.hidden.id,
+    icon: icons.dot.id,
     names: ['.hypernym', '.hypernymrc', '.hypernymconfig'],
   },
   {
-    icon: icons.hidden.id,
+    icon: icons.dot.id,
     names: ['.hyper', '.hyperrc', '.hyperconfig'],
   },
   {
-    icon: icons.hidden.id,
+    icon: icons.dot.id,
     names: [
-      '.editorconfig',
+      '.git',
       '.gitignore',
       '.gitkeep',
-      '.vscodeignore',
+      '.gitpreserve',
+      '.gitinclude',
+      '.gitmessage',
+      '.gitconfig',
+      '.gitmodules',
       '.gitattributes',
+      '.editorconfig',
+      '.vscodeignore',
+      '.keep',
     ],
   },
   {
-    icon: icons.hidden.id,
+    icon: icons.dot.id,
     names: [
       '.npmrc',
       '.vuerc',
@@ -162,22 +177,21 @@ export const fileNames = createIconMap([
     ],
   },
   {
-    icon: icons.hidden.id,
+    icon: icons.dot.id,
     names: [
       '.env',
       '.env.test',
       '.env.example',
+      '.env.template',
+      '.env.local',
+      '.env.dev',
       '.env.development',
+      '.env.alpha',
+      '.env.beta',
+      '.env.prod',
       '.env.production',
+      '.env.preview',
     ],
-  },
-  {
-    icon: icons.verified.id,
-    names: ['codeowners'],
-  },
-  {
-    icon: icons.info.id,
-    pattern: 'readme.{md,txt}',
   },
   {
     icon: icons.copyright.id,
@@ -188,5 +202,10 @@ export const fileNames = createIconMap([
     icon: icons.copyright.id,
     pattern: 'licence.{txt,md,rst}',
     names: ['licence'],
+  },
+  {
+    icon: icons.copyright.id,
+    pattern: 'copyright.{txt,md,rst}',
+    names: ['copyright'],
   },
 ])
