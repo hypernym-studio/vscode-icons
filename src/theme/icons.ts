@@ -11,32 +11,32 @@ export const icons = {
     id: '_folder-open',
     char: '\\e003',
   },
-  dot: {
-    id: '_dot',
-    char: '\\e004',
-  },
   config: {
     id: '_config',
-    char: '\\e005',
+    char: '\\e004',
   },
   document: {
     id: '_document',
-    char: '\\e006',
+    char: '\\e005',
   },
   font: {
     id: '_font',
-    char: '\\e007',
+    char: '\\e006',
   },
   image: {
     id: '_image',
-    char: '\\e008',
+    char: '\\e007',
   },
   video: {
     id: '_video',
+    char: '\\e008',
+  },
+  audio: {
+    id: '_audio',
     char: '\\e009',
   },
-  copyright: {
-    id: '_copyright',
+  '3d': {
+    id: '_3d',
     char: '\\e010',
   },
 }
