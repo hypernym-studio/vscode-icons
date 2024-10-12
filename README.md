@@ -22,6 +22,13 @@
 
 <br>
 
+## Features
+
+- Adds minimalistic modern style
+- Dynamically infers colors based on state
+- Allows additional customization via options
+- Provides special commands
+
 ## Installation
 
 ### Marketplace
@@ -48,7 +55,7 @@ All options are optional and will fall back to defaults if not specified.
 
 <sub>See the official VSCode <a href="https://code.visualstudio.com/docs/getstarted/settings">settings</a> section for more info.</sub>
 
-### Toggle Explorer Arrows
+### Explorer Arrows
 
 - Type: `boolean`
 - Default: `true`
