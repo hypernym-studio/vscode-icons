@@ -1,33 +1,9 @@
 import { icons } from './icons'
+import { configPatterns } from './patterns'
 import { createIconMap } from './icon-map'
 
-export const configExts = 'js,mjs,cjs,ts,mts,cts,json,yml,yaml,toml'
-
 export const fileExtensions = createIconMap([
-  {
-    icon: icons.config.id,
-    pattern: `conf.{${configExts}}`,
-  },
-  {
-    icon: icons.config.id,
-    pattern: `cnfg.{${configExts}}`,
-  },
-  {
-    icon: icons.config.id,
-    pattern: `config.{${configExts}}`,
-  },
-  {
-    icon: icons.config.id,
-    pattern: `configuration.{${configExts}}`,
-  },
-  {
-    icon: icons.config.id,
-    pattern: `settings.{${configExts}}`,
-  },
-  {
-    icon: icons.config.id,
-    pattern: `options.{${configExts}}`,
-  },
+  ...configPatterns,
   {
     icon: icons.document.id,
     extensions: [

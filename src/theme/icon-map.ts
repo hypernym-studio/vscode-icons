@@ -1,4 +1,4 @@
-interface IconMap {
+export interface IconMap {
   icon: string
   pattern?: string
   extensions?: string[]
