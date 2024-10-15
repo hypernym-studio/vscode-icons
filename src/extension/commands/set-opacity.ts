@@ -1,13 +1,13 @@
 import { window } from 'vscode'
 import { setThemeConfig } from '@/extension/config/theme-config'
-import { isValidDefaultInput, validateColorInput } from './utils'
+import { isValidDefaultInput, validateOpacityInput } from './utils'
 import type { InputBoxOptions } from 'vscode'
 
-export async function setColor(section: string): Promise<void> {
+export async function setOpacity(section: string): Promise<void> {
   const input: InputBoxOptions = {
-    placeHolder: 'Enter a valid HEX color, e.g. #fff, #ffffff, #ffffff66',
+    placeHolder: 'Enter a percentage size, e.g. 60%',
     ignoreFocusOut: true,
-    validateInput: validateColorInput,
+    validateInput: validateOpacityInput,
   }
 
   const value = await window.showInputBox(input)

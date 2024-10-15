@@ -73,20 +73,32 @@
           "default": "",
           "markdownDescription": "Specifies a custom color for folder icons. Accepts valid HEX color format. \n\n Default: `undefined` \n\n Example: `#fff`, `#ffffff`, `#ffffff33`"
         },
-        "hypernym-icons.folders.size": {
+        "hypernym-icons.folders.opacity": {
           "order": 3,
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Specifies a custom opacity for folder icons. Accepts a percentage size format. \n\n Default: `undefined` \n\n Example: `60%`"
+        },
+        "hypernym-icons.folders.size": {
+          "order": 4,
           "type": "string",
           "default": "",
           "markdownDescription": "Specifies a custom size for folder icons. Accepts a percentage size format. \n\n Default: `undefined` \n\n Example: `130%`"
         },
         "hypernym-icons.icons.color": {
-          "order": 4,
+          "order": 5,
           "type": "string",
           "default": "",
           "markdownDescription": "Specifies a custom color for all icons. Accepts valid HEX color format. \n\n Default: `undefined` \n\n Example: `#fff`, `#ffffff`, `#ffffff33`"
         },
+        "hypernym-icons.icons.opacity": {
+          "order": 6,
+          "type": "string",
+          "default": "",
+          "markdownDescription": "Specifies a custom opacity for all icons. Accepts a percentage size format. \n\n Default: `undefined` \n\n Example: `60%`"
+        },
         "hypernym-icons.icons.size": {
-          "order": 5,
+          "order": 7,
           "type": "string",
           "default": "",
           "markdownDescription": "Specifies a custom size for all icons. Accepts a percentage size format. \n\n Default: `undefined` \n\n Example: `130%`"
@@ -106,6 +118,11 @@
       },
       {
         "category": "Hypernym Icons",
+        "command": "hypernym-icons.setFolderOpacity",
+        "title": "Set Folder Opacity"
+      },
+      {
+        "category": "Hypernym Icons",
         "command": "hypernym-icons.setFolderSize",
         "title": "Set Folder Size"
       },
@@ -113,6 +130,11 @@
         "category": "Hypernym Icons",
         "command": "hypernym-icons.setIconColor",
         "title": "Set Icon Color"
+      },
+      {
+        "category": "Hypernym Icons",
+        "command": "hypernym-icons.setIconOpacity",
+        "title": "Set Icon Opacity"
       },
       {
         "category": "Hypernym Icons",
