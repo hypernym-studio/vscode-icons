@@ -81,7 +81,22 @@ Specifies a custom color for folder icons. Accepts valid HEX color format.
 // settings.json
 
 {
-  "hypernym-icons.folders.color": "#fff"
+  "hypernym-icons.folders.color": "#fff" // #fff, #ffffff, #ffffff66
+}
+```
+
+### Folder Opacity
+
+- Type: `string`
+- Default: `undefined`
+
+Specifies a custom opacity for folder icons. Accepts a percentage size format.
+
+```ts
+// settings.json
+
+{
+  "hypernym-icons.folders.opacity": "60%" // 0-100%
 }
 ```
 
@@ -111,7 +126,22 @@ Specifies a custom color for all icons. Accepts valid HEX color format.
 // settings.json
 
 {
-  "hypernym-icons.icons.color": "#fff"
+  "hypernym-icons.icons.color": "#fff" // #fff, #ffffff, #ffffff66
+}
+```
+
+### Icon Opacity
+
+- Type: `string`
+- Default: `undefined`
+
+Specifies a custom opacity for all icons. Accepts a percentage size format.
+
+```ts
+// settings.json
+
+{
+  "hypernym-icons.icons.opacity": "60%" // 0-100%
 }
 ```
 
@@ -152,6 +182,12 @@ Specifies the visibility of the explorer arrows.
 
 Specifies a custom color for folder icons. Accepts valid HEX color format.
 
+### Set Folder Opacity
+
+- Command: `Hypernym Icons: Set Folder Opacity`
+
+Specifies a custom opacity for folder icons. Accepts a percentage size format.
+
 ### Set Folder Size
 
 - Command: `Hypernym Icons: Set Folder Size`
@@ -164,13 +200,19 @@ Specifies a custom size for folder icons. Accepts a percentage size format.
 
 Specifies a custom color for all icons. Accepts valid HEX color format.
 
+### Set Icon Opacity
+
+- Command: `Hypernym Icons: Set Icon Opacity`
+
+Specifies a custom opacity for all icons. Accepts a percentage size format.
+
 ### Set Icon Size
 
 - Command: `Hypernym Icons: Set Icon Size`
 
 Specifies a custom size for all icons. Accepts a percentage size format.
 
-### Reset Command
+### Reset Commands
 
 It is also possible to reset settings via commands if they are input type. Simply select a command, type `default` and run it. This will reset the option to its default value.
 
