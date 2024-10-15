@@ -39,4 +39,8 @@ export const icons = {
     id: '_3d',
     char: '\\e010',
   },
+  hidden: {
+    id: '_hidden',
+    char: '\\e011',
+  },
 }

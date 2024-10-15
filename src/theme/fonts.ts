@@ -13,6 +13,6 @@ export const fonts: FontDefinition[] = [
     ],
     weight: 'normal',
     style: 'normal',
-    size: '125%',
+    size: '120%',
   },
 ]
