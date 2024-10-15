@@ -18,6 +18,14 @@ export interface ExtensionConfig {
      */
     color?: string
     /**
+     * Specifies a custom opacity for folder icons.
+     *
+     * Accepts a percentage size format.
+     *
+     * @default undefined
+     */
+    opacity?: string
+    /**
      * Specifies a custom size for folder icons.
      *
      * Accepts a percentage size format.
@@ -38,6 +46,14 @@ export interface ExtensionConfig {
      * @default undefined
      */
     color?: string
+    /**
+     * Specifies a custom opacity for all icons.
+     *
+     * Accepts a percentage size format.
+     *
+     * @default undefined
+     */
+    opacity?: string
     /**
      * Specifies a custom size for all icons.
      *
