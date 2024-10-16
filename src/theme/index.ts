@@ -1,26 +1,29 @@
-import { defaultNames } from './default-names'
+import { icons } from './icons'
+import { fonts } from './fonts'
+import { createIconDefinitions } from './icon-definitions'
 import { fileExtensions } from './file-extensions'
 import { fileNames } from './file-names'
-import { transformData, paths } from '@/utils'
-import type { ThemeData } from '@/types'
+import type { IconTheme, ExtensionConfig } from '@/types'
 
-const { default: iconDefinitions }: ThemeData = await import(
-  paths.definitionsSchema
-)
+// VSCode API Documentation
+// @link https://code.visualstudio.com/api/extension-guides/file-icon-theme
 
-export const theme = JSON.stringify(
-  {
-    hidesExplorerArrows: true,
+export function createIconTheme(config: ExtensionConfig): IconTheme {
+  const { hidesExplorerArrows } = config
+
+  const iconDefinitions = createIconDefinitions(config)
+
+  const customIconTheme: IconTheme = {
+    hidesExplorerArrows,
+    showLanguageModeIcons: false,
     iconDefinitions,
-    ...transformData(defaultNames, 'dark'),
-    fileExtensions: transformData(fileExtensions, 'dark'),
-    fileNames: transformData(fileNames, 'dark'),
-    light: {
-      ...transformData(defaultNames, 'light'),
-      fileExtensions: transformData(fileExtensions, 'light'),
-      fileNames: transformData(fileNames, 'light'),
-    },
-  },
-  null,
-  2,
-)
+    fonts,
+    file: icons.file.id,
+    folder: icons.folder.id,
+    folderExpanded: icons.folderOpen.id,
+    fileExtensions,
+    fileNames,
+  }
+
+  return customIconTheme
+}
