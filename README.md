@@ -1,5 +1,5 @@
 <p align="center">
-  <img alt="Hypernym Icons" src="./media/cover.png">
+  <img alt="Hypernym Icons" src="https://raw.githubusercontent.com/hypernym-studio/vscode-icons/main/media/cover.png">
 </p>
 
 <h1 align="center">Hypernym Icons</h1>
@@ -28,7 +28,7 @@
 ## Extension
 
 <p align="center">
-  <img alt="Hypernym Icons" src="./media/icons.png">
+  <img alt="Hypernym Icons" src="https://raw.githubusercontent.com/hypernym-studio/vscode-icons/main/media/icons.png">
 </p>
 
 The brand new carefully designed `Hypernym Icons` theme provides an improved, modern and more eye-pleasing minimalistic look.
