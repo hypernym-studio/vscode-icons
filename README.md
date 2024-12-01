@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/hypernym-studio/vscode-icons/main/media/cover.gif" alt="Hypernym Icons Cover" />
+  <img alt="Hypernym Icons" src="./media/cover.png">
 </p>
 
 <h1 align="center">Hypernym Icons</h1>
@@ -16,10 +16,6 @@
   <a href="https://marketplace.visualstudio.com/items?itemName=hypernym-studio.hypernym-icons">Marketplace</a>
 </p>
 
-<p align="center">
-  <strong>Hypernym Studio</strong>
-</p>
-
 <br>
 
 ## Features
@@ -28,6 +24,20 @@
 - Dynamically infers colors based on state
 - Allows additional customization via options
 - Provides special commands
+
+## Extension
+
+<p align="center">
+  <img alt="Hypernym Icons" src="./media/icons.png">
+</p>
+
+The brand new carefully designed `Hypernym Icons` theme provides an improved, modern and more eye-pleasing minimalistic look.
+
+Extension now supports an additional customization system that allows you to change the color, opacity, and size of icons and folders.
+
+The icons are merged into a custom font because this brings more flexibility such as dynamically inferring icon colors on hover and active states with adjustable icon sizes.
+
+It also implements special commands for easier usage from VSCode Command Palette.
 
 ## Installation
 
@@ -49,7 +59,7 @@ If necessary, the extension can be installed manually (optional).
 
 ## Options
 
-Extension provides a configuration system that allows additional customization such as changing the color, opacity and size of icons.
+It is now possible to change the color, opacity and size of the icons and completely change the appearance as needed.
 
 All options are optional and will fall back to defaults if not specified.
 
@@ -81,7 +91,7 @@ Specifies a custom color for folder icons. Accepts valid HEX color format.
 // settings.json
 
 {
-  "hypernym-icons.folders.color": "#fff" // #fff, #ffffff, #ffffff66
+  "hypernym-icons.folders.color": "#fff" // #ffffff
 }
 ```
 
@@ -126,7 +136,7 @@ Specifies a custom color for all icons. Accepts valid HEX color format.
 // settings.json
 
 {
-  "hypernym-icons.icons.color": "#fff" // #fff, #ffffff, #ffffff66
+  "hypernym-icons.icons.color": "#fff" // #ffffff
 }
 ```
 
