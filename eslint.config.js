@@ -1,4 +1,8 @@
-import { jsConfig, tsConfig, ignoresConfig } from '@hypernym/eslint-config'
+import {
+  defineConfig,
+  jsConfig,
+  tsConfig,
+  ignoresConfig,
+} from '@hypernym/eslint-config'
 
-/** @type {import("eslint").Linter.Config[]} */
-export default [jsConfig, tsConfig, ignoresConfig]
+export default defineConfig([jsConfig, tsConfig, ignoresConfig])
