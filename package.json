@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/hypernym-studio/vscode-icons"
+    "url": "git+https://github.com/hypernym-studio/vscode-icons.git"
   },
   "bugs": {
     "url": "https://github.com/hypernym-studio/vscode-icons/issues"
@@ -156,12 +156,8 @@
     "lint:fix": "eslint --fix .",
     "format": "prettier --write ."
   },
-  "sideEffects": false,
-  "packageManager": "pnpm@9.14.4",
   "engines": {
-    "vscode": "^1.95.0",
-    "node": ">=20.0.0",
-    "pnpm": ">=9.0.0"
+    "vscode": ">=1.100.0"
   },
   "peerDependencies": {
     "@types/node": ">=20.0.0",
@@ -176,16 +172,16 @@
     }
   },
   "devDependencies": {
-    "@hypernym/eslint-config": "^3.5.3",
-    "@hypernym/prettier-config": "^3.2.1",
-    "@hypernym/tsconfig": "^2.4.0",
-    "@hypernym/utils": "^3.4.1",
-    "@types/node": "^22.10.1",
-    "@types/vscode": "^1.95.0",
-    "@vscode/vsce": "^3.2.1",
-    "esbuild": "^0.24.0",
-    "eslint": "^9.16.0",
-    "prettier": "^3.4.1",
-    "typescript": "^5.7.2"
+    "@hypernym/eslint-config": "^3.6.1",
+    "@hypernym/prettier-config": "^3.2.4",
+    "@hypernym/tsconfig": "^2.6.1",
+    "@hypernym/utils": "^3.4.4",
+    "@types/node": "^22.15.17",
+    "@types/vscode": "^1.100.0",
+    "@vscode/vsce": "^3.3.2",
+    "esbuild": "^0.25.4",
+    "eslint": "^9.26.0",
+    "prettier": "^3.5.3",
+    "typescript": "^5.8.3"
   }
 }
